@@ -33,10 +33,11 @@
       <div class="progress-container">
         <div id="progressBar" class="progress-bar"></div>
       </div>
+      <span id="progressPercentage">0%</span>
     </div>
     <div class="container">
       <!-- Feedback message -->
-      <p id="greeting"></p>
+      <p id="greeting" role="status" aria-live="polite" aria-atomic="true"></p>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -47,14 +48,15 @@
               type="text"
               id="attendeeName"
               name="attendeeName"
+              value=""
               placeholder="Enter name..."
               required
             />
             <select id="teamSelect" name="team" required>
               <option value="" disabled selected>Select Team...</option>
-              <option value="water">Team Water Wise</option>
-              <option value="zero">Team Net Zero</option>
-              <option value="power">Team Renewables</option>
+              <option value="waterCount">Team Water Wise</option>
+              <option value="zeroCount">Team Net Zero</option>
+              <option value="powerCount">Team Renewables</option>
             </select>
           </div>
           <button type="submit" id="checkInBtn">
